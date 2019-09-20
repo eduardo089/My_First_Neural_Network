@@ -57,11 +57,11 @@ while data < len(y):
         for l in range(len(w)):
             for j in range(len(w[l])):
                 for k in range(len(w[l][j])):
-                    w[l][j][k] = w[l][j][k] + eta*a[l][k]*delta[l+1][j]
+                    w[l][j][k] = w[l][j][k] - eta*a[l][k]*delta[l+1][j]
         
         for l in range(len(b)):
             for j in range(len(b[l])):
-                b[l][j] = b[l][j] + eta*delta[l][j]
+                b[l][j] = b[l][j] - eta*delta[l][j]
     data += 1
 
 #predicción
